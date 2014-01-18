@@ -6,14 +6,12 @@
 	<link href="css/vpi.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+
 <?php
 if(isset($_POST['Answer']))
 {
-  $conn = mysql_connect("mysql5-48.90", "morphome-vpi", "r00tpassw0rd");
-if(! $conn )
-{
-  die('Could not connect: ' . mysql_error());
-}
+
+include 'db.php';
 
 $A=$_GET['a'];
 $k=$_GET['k'];
