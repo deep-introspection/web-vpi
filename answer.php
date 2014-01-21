@@ -95,7 +95,7 @@ function validate() {
     }
 
     // check humanness input
-    var r = document.getElementsByName("cooperativeness");
+    var r = document.getElementsByName("humanness");
     var c = -1;
 
     for(var i=0; i < r.length; i++){
