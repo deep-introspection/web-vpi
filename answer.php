@@ -28,7 +28,19 @@ if(! $retval )
 {
   die('Could not enter data: ' . mysql_error());
 }
-echo "Entered data successfully\n";
+echo "<html>";
+echo "<head>";
+echo "	<meta charset=\"utf-8\"/>";
+echo "	<title>Report</title>";
+echo "	<link href='http://fonts.googleapis.com/css?family=Metrophobic' rel='stylesheet' type='text/css'>";
+echo "	<link href=\"css/vpi.css\" rel=\"stylesheet\" type=\"text/css\">";
+echo "</head>";
+echo "<body>";
+echo "<div style=\"height:33px;width:280px;\">";
+echo "Thanks for your participation.\n";
+echo "<br>\n";
+echo "<a href=\"trial.php\">Replay</a> or <a href=\"index.php\">back to main page.</a>\n";
+echo "</div>";
 mysql_close($conn);
 }
 else
@@ -54,7 +66,7 @@ else
 <tr></tr>
 </td>
 <tr>
-<td width="400">How realistic was the interaction?<br></td>
+<td width="400">How human-like was the partner?<br></td>
 </tr>
 <tr>
 <td>
