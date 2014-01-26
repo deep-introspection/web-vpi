@@ -16,10 +16,15 @@ include 'db.php';
 $A=$_GET['a'];
 $k=$_GET['k'];
 $mu=$_GET['mu'];
+$dtv=$_GET['dtv'];
+$dtm=$_GET['dtm'];
+
+$remote_addr=$_SERVER['REMOTE_ADDR'];
+$http_x_forwarded_for=$_SERVER['HTTP_X_FORWARDED_FOR'];
 
 $cooperativeness=$_POST['cooperativeness'];
 $humanness=$_POST['humanness'];
-$sql = "INSERT INTO answers VALUES('',now(),'$A','$k','$mu','$cooperativeness','$humanness')";
+$sql = "INSERT INTO answers VALUES('',now(),'$A','$k','$mu','$cooperativeness','$humanness', '$dtm', '$dtv', '$remote_addr', '$http_x_forwarded_for')";
 
 
 mysql_select_db('morphome-vpi');
