@@ -9,28 +9,34 @@
         <canvas id="myCanvas" width="1000" height="500" class="vpi-canvas"></canvas>
 
         <script>
-<?php 
+	<?php 
         $trialDuration = 20 * 1000; // [s * 1000]
         $mu = (2 * rand(0, 1)) - 1;
         $a = myRand(0, 3);
         $k = myRand(0, 1);
-        echo "var mu = ".$mu.";";
-        echo "var A = ".$a.";";
-        echo "var B = -0.025;";
-        echo "var dt = 0.01;";
-        echo "var omega = 1. * 2 * 3.142;";
-        echo "var alpha = 0.641;";
-        echo "var beta = 0.05;";
-        echo "var gamma = 12.457;";
-        echo "var k = ".$k.";";
+        echo "
+           var mu = $mu;
+           var A = $a;
+           var B = -0.025;
+           var dt = 0.01;
+           var omega = 1. * 2 * 3.142;
+           var alpha = 0.641;
+           var beta = 0.05;
+           var gamma = 12.457;
+           var k = $k;";
+
         ?>
         </script>
         <script>
         <?php
-           echo "var timer = setInterval(trialEnd,".$trialDuration.");";
+           echo "var timer = setInterval(trialEnd, $trialDuration);";
         ?>
         function trialEnd(){
-           <?php echo "window.location = 'answer.php?mu=".$mu."&k=".$k."&a=".$a."';" ?>
+           dtm = frameRate.mean;
+           dtv = frameRate.M2/(frameRate.n - 1);
+           <?php 
+               echo "window.location = 'answer.php?mu=$mu&k=$k&a=$a&dtm='+ dtm +'&dtv=' + dtv;" 
+           ?>
         }
         </script>
            <script src="js/vpi.js"></script>

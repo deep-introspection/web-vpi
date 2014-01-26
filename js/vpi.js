@@ -28,10 +28,13 @@ var mouseListener_dt = 0;
 var animationLoopCount = 0;
 var lastMousePosition = { 'x' : 0, 'y' : 0};
 
+var framerate = {'mean' : 0, 'M2' : 0, 'n' : 0};
+
 (function animloop(){
 	now = new Date().getTime() / 1000;
 	animationLoopCount++;
 	dt = 1 / (animationLoopCount / (now - countStart));
+        estimateFramerate(dt);
 	requestAnimFrame(animloop);
 	updateMouseVelocity();
 	updateHKB();
@@ -68,6 +71,13 @@ function render(){
     drawCircle(x1 * scale + centerX, 200);
     drawCircle(x2 * scale + centerX, 400);        
 }        
+
+function estimateFramerate(x){
+    framerate.n = framerate.n + 1
+    delta = x - framerate.mean
+    framerate.mean = framerate.mean + delta / framerate.n
+    framerate.M2 = framerate.M2 + delta * (x - framerate.mean)
+}
 
 function updateMouseVelocity(){
 	x2new = -(centerX - lastMousePosition.x) /  scale;
