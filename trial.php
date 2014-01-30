@@ -27,19 +27,19 @@
 
         ?>
         </script>
+           <script src="js/vpi.js"></script>
         <script>
         <?php
            echo "var timer = setInterval(trialEnd, $trialDuration);";
         ?>
         function trialEnd(){
-           dtm = frameRate.mean;
-           dtv = frameRate.M2/(frameRate.n - 1);
+           dtm = framerate.mean;
+           dtv = framerate.M2/(framerate.n - 1);
            <?php 
                echo "window.location = 'answer.php?mu=$mu&k=$k&a=$a&dtm='+ dtm +'&dtv=' + dtv;" 
            ?>
         }
         </script>
-           <script src="js/vpi.js"></script>
        </div>
   </body>
 </html>
