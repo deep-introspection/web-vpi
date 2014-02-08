@@ -96,9 +96,9 @@ else
 </tr>
 <tr>
 <td>
-	<input type="radio" name="controler" value="-1" style="margin-left: 50px">Mouse
-	<br><input type="radio" name="controler" value="-0.5" style="margin-left: 50px">Trackpad
-	<br><input type="radio" name="controler" value="0" style="margin-left: 50px">Other
+	<input type="radio" name="controler" value="1" style="margin-left: 50px">Mouse
+	<br><input type="radio" name="controler" value="0" style="margin-left: 50px">Trackpad
+	<br><input type="radio" name="controler" value="-1" style="margin-left: 50px">Other
 </td>
 </tr>
 <tr>

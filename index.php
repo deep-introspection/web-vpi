@@ -11,12 +11,12 @@
   <div>
     <h1>Welcome to Web-VPI</h1>
   
-  You will interact with a Virtual Partner.
+  In this experiment, you will interact with a Virtual Partner.
   <br>
-  Your goal is to synchronize your movement in-phase with it.
-  Just use your mouse.
+  Your goal is to synchronize the movement in-phase with it.
+  Just use your mouse or trackpad to control your circle.
     <a name="entree" id="entree"></a>
-      <h2>To begin, click 
+      <h2>Ready? To begin, click 
       <?php
       $_SESSION['xp'] = 0;
       echo "<a class=\"here\" href=\"";
@@ -26,13 +26,14 @@
       
       </h2>
 
-<i>Project done by Guillaume Dumas and Johannes Drever</i>
+<i>Project done by <a href="https://twitter.com/introspection">Guillaume Dumas</a> and <a href="https://plus.google.com/u/0/+JohannesDrever/about">Johannes Drever</a>.
+	<br>All the source code is available on <a href="https://github.com/crowd-coordination/web-vpi">GitHub</a>!</i>
 </div>
   <div id="footer">
 	  <h2><u>References:</u></h2>
-- <a href="http://www.scholarpedia.org/article/Haken-Kelso-Bunz_model">Kelso JAS (2008), Haken-Kelso-Bunz model. Scholarpedia, 3(10):1612. </a>
+- <a href="http://www.scholarpedia.org/article/Haken-Kelso-Bunz_model">Haken-Kelso-Bunz model. Kelso JAS (Scholarpedia, 2008)</a>
 <br><br>
-- <a href="www.plosone.org/article/info:doi%2F10.1371%2Fjournal.pone.0005749">Kelso JAS, de Guzman GC, Reveley C, Tognoli E (2009) Virtual Partner Interaction (VPI): Exploring Novel Behaviors via Coordination Dynamics. PLoS ONE 4(6): e5749. doi:10.1371/journal.pone.0005749</a>
+- <a href="www.plosone.org/article/info:doi%2F10.1371%2Fjournal.pone.0005749">Virtual Partner Interaction (VPI): Exploring Novel Behaviors via Coordination Dynamics. Kelso JAS, de Guzman GC, Reveley C, Tognoli E (PLoS ONE, 2009)</a>
   </div>
 </body>
 </html>
