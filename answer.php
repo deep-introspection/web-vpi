@@ -10,9 +10,13 @@
 <?php
 if(isset($_POST['Answer']))
 {
-	
-include 'db.php';
-	
+
+	$conn = mysql_connect("mysql5-48.90", "morphome-vpi", "w3bvp12014");
+	if(! $conn )
+	{
+	  die('Could not connect: ' . mysql_error());
+	}
+
 $A=$_GET['a'];
 $k=$_GET['k'];
 $mu=$_GET['mu'];
@@ -42,17 +46,18 @@ echo "	<link href='http://fonts.googleapis.com/css?family=Metrophobic' rel='styl
 echo "	<link href=\"css/vpi.css\" rel=\"stylesheet\" type=\"text/css\">";
 echo "</head>";
 echo "<body>";
-echo "<div style=\"height:240px;width:280px;\">";
+echo "<div style=\"height:310px;width:280px;\">";
 echo "Thanks for your participation!\n";
 echo "<br>\n";
 echo "<br>\n";
-echo "Since we want as much data as possible, it would be great to try to do as much trials as you can.\n";
+echo "Since we want to collect as much data as possible, it would be great to try to do as much trials as you can.\n";
+echo "Each interaction engages a partner with a totally different behavior.\n";
 echo "<br>\n";
 echo "<br>\n";
 echo "You can also share this experiment with all your friends... ;)\n";
 echo "<br>\n";
 echo "</div>\n";
-echo "<div style=\"height:8px;width:280px;\">";
+echo "<div style=\"height:6px;width:280px;\">";
 echo "<a href=\"trial.php\">Replay</a> or <a href=\"index.php\">Back to Main Page.</a>\n";
 echo "</div>";
 mysql_close($conn);
